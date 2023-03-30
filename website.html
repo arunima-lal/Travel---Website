@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Just Travel</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="icon" type="image/png"
+        href="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcShsXaLjb1bpM4kTBNZm9rGmQm1N5TzUU-Ycg&usqp=CAU" />
+    <link href="./website.css" rel="stylesheet">
+</head>
+
+<body>
+
+    <nav>
+        <div class="abc">
+            <div class="navbar abc">
+                <div class="logo">
+                    <img
+                        src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcShsXaLjb1bpM4kTBNZm9rGmQm1N5TzUU-Ycg&usqp=CAU">
+                </div>
+                <div class="nav-menu1">
+                    <ul class="nav-menu2">
+                        <li class="nav-item"><a href="#" class="active">Home</a></li>
+                        <li class="nav-item"><a href="#">About</a></li>
+                        <li class="nav-item"><a href="#">Contact Us</a></li>
+                    </ul>
+                    <div class="hamburger">
+                        <span class="bar"></span>
+                        <span class="bar"></span>
+                        <span class="bar"></span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </nav>
+    <section>
+        <div class="content">
+            <h1>Explore the World</h1>
+            <h3>Rediscover Yourself</h3>
+            <p>The trip of a lifetime that you've been daydreaming</p><br>
+            <button>Plan Your Trip</button>
+        </div>
+    </section>
+
+    <script>
+        const hamburger = document.querySelector(".hamburger");
+        const navMenu = document.querySelector(".nav-menu2");
+
+        hamburger.addEventListener("click", mobileMenu);
+
+        function mobileMenu() {
+            hamburger.classList.toggle("active");
+            navMenu.classList.toggle("active");
+        }
+
+        const navLink = document.querySelectorAll(".nav-item");
+
+        navLink.forEach(n => n.addEventListener("click", closeMenu));
+
+        function closeMenu() {
+            hamburger.classList.remove("active");
+            navMenu.classList.remove("active");
+        }
+    </script>
+
+</body>
+
+</html>
